@@ -11,3 +11,6 @@ def card(request):
 
 def time_table(request):
     return render(request,"time_table.html")
+
+def armstrong(request):
+    return render(request,"armstrong.html")

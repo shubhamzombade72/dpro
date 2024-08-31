@@ -24,4 +24,5 @@ urlpatterns = [
     path('calculator/',views.calculator),
     path('card/', views.card),
     path('time_table/', views.time_table),
+    path('armstrong/', views.armstrong),
 ]
