@@ -25,4 +25,6 @@ urlpatterns = [
     path('card/', views.card),
     path('time_table/', views.time_table),
     path('armstrong/', views.armstrong),
+    path('contact/<int:id>', views.contact),
+    path('about/<id>/<name>', views.about),
 ]

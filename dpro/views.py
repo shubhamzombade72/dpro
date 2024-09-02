@@ -14,3 +14,14 @@ def time_table(request):
 
 def armstrong(request):
     return render(request,"armstrong.html")
+
+def contact(request):
+    return render(request,"contact.html")
+
+def about(request,id,name):
+    data={"id":id,
+          "name":name,
+          "cname":"zombade",
+          "arr":['324']}
+    
+    return render(request,"about.html",data)
