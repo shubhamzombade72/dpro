@@ -6,10 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>About </h1>
-    <p>{{id}}</p>
-    <p>{{name}}</p>
-    <p>{{cname}}</p>
-    <p>{{arr}}</p>
+    <h1>About</h1>
+    <p>{{ id }}</p>
+    <p>{{ name }}</p>
+    <p>{{ cname }}</p>
+
+    <table border="1" cellpadding="10" cellspacing="0" style="margin: 10px;">
+        <tr>
+            <th>Index</th>
+            <th>Even</th>
+        </tr>
+        {% for i in arr %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ i }}</td>
+                </tr>
+            {% endfor %}
+    </table>
+
+    <form action="/findevenodd/" method="post">
+        {% csrf_token %}
+        <input type="text" name="number">
+        <input type="submit">
+    </form>
 </body>
 </html>
