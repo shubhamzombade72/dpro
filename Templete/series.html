@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .changeable:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: skyblue; padding: 10% ">
+        <form action="/series/" method="post" >
+            {% csrf_token %} 
+            <input name="number" type="text" style="padding: 10px; box-shadow: 4px 4px ; margin-right: 4px">
+            <button type="submit" class="changeable" style="padding: 10px;background-color: orange; box-shadow: 4px 4px ;">Generate</button>
+        </form>
+    </div>
+    <div style="background-color: teal;color: white;font-weight: bold; height: 400px;padding: 20px; font-size: 30px ">
+        <h4>Series: </h4>
+        {% for i in series %}
+        {{ i }}
+        {% endfor %}
+    </div>
+</body>
+</html>
