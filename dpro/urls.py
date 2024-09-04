@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from dpro import views
+from dpro import program
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +28,6 @@ urlpatterns = [
     path('armstrong/', views.armstrong),
     path('contact/<int:id>', views.contact),
     path('about/<id>/<name>', views.about),
+    path('findevenodd/', views.findevenodd),
+    path('series/', program.seriesForm),
 ]
