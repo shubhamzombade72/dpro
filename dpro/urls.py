@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 from dpro import views
 from dpro import program
+from dpro import factfunc
+from dpro import addnumber
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +32,6 @@ urlpatterns = [
     path('about/<id>/<name>', views.about),
     path('findevenodd/', views.findevenodd),
     path('series/', program.seriesForm),
+    path('factorial/', factfunc.factFunc),
+    path('addition/',addnumber.addition),
 ]
