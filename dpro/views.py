@@ -22,6 +22,24 @@ def about(request,id,name):
     data={"id":id,
           "name":name,
           "cname":"zombade",
-          "arr":['324']}
+          "arr":[1,2,3,4,5,6,7,8,9,10],
+    }
+    
+    temp=[]
+    
+    for i in data["arr"]:  
+        if i % 2 == 0:
+            temp.append(i)
+           
+    data={
+        "arr":temp
+    }
+        
+    
     
     return render(request,"about.html",data)
+
+def findevenodd(request):
+    temp=request.POST.get("number")
+    print(temp)
+    return render (request,"about.html")
