@@ -16,9 +16,9 @@ def addstudent(request):
         },
         {
             "roll": 103,
-            "fname": 'Bhai',
-            "lname": 'Pawar',
-            "marks": 34,
+            "fname": 'shubham',
+            "lname": 'zombade',
+            "marks": 1,
         },
         {
             "roll": 104,
