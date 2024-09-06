@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ffafbd, #ffc3a0); /* Gradient background */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #ddd; /* Light border */
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd; /* Border for rows */
+        }
+
+        th {
+            background: linear-gradient(135deg, #ff6f61, #de6c7d); /* Gradient header background */
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Light background for even rows */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #fff; /* White background for odd rows */
+        }
+
+        tr:hover {
+            background-color: #ffedcc; /* Light peach color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Salary</h1>
+
+    <table border="1px">
+      <tr>
+        <th>SR.NO</th>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Employee Salary</th>
+        <th>Employee Days</th>
+      </tr>
+      {% for employees in employee %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td> {{ employees.id }} </td>
+        <td> {{ employees.name }} </td>
+        <td> {{ employees.salary }} </td>
+        <td> {{ employees.days }} </td>
+      </tr>
+      {% endfor %}
+    </table>
+</body>
+</html>
