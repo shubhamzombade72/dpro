@@ -20,6 +20,8 @@ from dpro import views
 from dpro import program
 from dpro import factfunc
 from dpro import addnumber
+from dpro import demo
+from dpro import employee_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,4 +36,6 @@ urlpatterns = [
     path('series/', program.seriesForm),
     path('factorial/', factfunc.factFunc),
     path('addition/',addnumber.addition),
+    path('demo/' ,demo.addstudent),
+    path('employee/' ,employee_view.employee_add),
 ]
